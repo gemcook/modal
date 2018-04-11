@@ -117,6 +117,26 @@ storiesOf('Modal', module)
     }),
   )
   .add(
+    'the size of xl',
+    withState({isModal: false})(({store}) => {
+      return (
+        <React.Fragment>
+          <Button
+            color="pink"
+            onClick={() => store.set({isModal: !store.state.isModal})}>
+            Open Modal
+          </Button>
+          <Modal
+            isModal={store.state.isModal}
+            ModalBody={Welcome}
+            handleCloseModal={() => store.set({isModal: !store.state.isModal})}
+            size="xl"
+          />
+        </React.Fragment>
+      );
+    }),
+  )
+  .add(
     'lots of characters',
     withState({isModal: false})(({store}) => {
       return (
