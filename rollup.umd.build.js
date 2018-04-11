@@ -145,7 +145,7 @@ async function build() {
     bundle.write({
       format: 'umd',
       file: resolvePath('lib/index.umd.js'),
-      name: 'Pagination',
+      name: 'Modal',
       exports: 'named',
       globals: {
         react: 'React',
