@@ -12,6 +12,7 @@
 }
 
 .app__modal {
+  overflow: auto;
   background-color: #fff;
   outline: none;
   padding: {
@@ -41,7 +42,7 @@
       }
     }
 
-    @include mq_down('sm') {
+    @include mq_down('md') {
       padding: {
         top: 30px;
         right: 10px;
@@ -51,7 +52,7 @@
   }
 
   &.xs {
-    width: 50vw;
+    width: 45vw;
   }
 
   &.sm {
@@ -70,7 +71,7 @@
     width: 95vw;
   }
 
-  @include mq_down('sm') {
+  @include mq_down('md') {
     width: 90vw;
     padding: {
       top: 24px;
@@ -84,15 +85,15 @@
     }
 
     &.sm {
-      width: 90vw;
+      width: 91vw;
     }
 
     &.md {
-      width: 90vw;
+      width: 92vw;
     }
 
     &.lg {
-      width: 90vw;
+      width: 93vw;
     }
 
     &.xl {
