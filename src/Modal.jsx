@@ -43,6 +43,7 @@ function Modal(props: ModalProps) {
         content: {
           minHeight: height ? `${height}px` : '300px',
           maxHeight: '80%',
+          borderRadius: '4px',
         },
       }}>
       <div
