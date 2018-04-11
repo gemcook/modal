@@ -1,0 +1,18 @@
+$overlay__background-color: red !default;
+// min-width
+$bp_up: (
+  'xs': 'screen and (min-width: 0px)',
+  'sm': 'screen and (min-width: 360px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 992px)',
+  'xl': 'screen and (min-width: 1366px)'
+);
+
+// max-width
+$bp_down: (
+  'xs': 'screen and (max-width: 359px)',
+  'sm': 'screen and (max-width: 767px)',
+  'md': 'screen and (max-width: 991px)',
+  'lg': 'screen and (max-width: 1365px)',
+  'xl': 'screen and (max-width: 10000px)'
+);

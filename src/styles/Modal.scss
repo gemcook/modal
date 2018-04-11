@@ -1,0 +1,124 @@
+.a__overlay {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(#000, 0.45);
+}
+
+.app__modal {
+  background-color: #fff;
+  outline: none;
+  padding: {
+    top: 24px;
+    right: 80px;
+    bottom: 24px;
+    left: 80px;
+  }
+  padding: {
+    top: 24px;
+    right: 5%;
+    bottom: 24px;
+    left: 5%;
+  }
+
+  .b__body {
+    width: 100%;
+    padding: {
+      top: 22px;
+    }
+
+    @include mq_down() {
+      padding: {
+        top: 20px;
+        right: 10px;
+        left: 10px;
+      }
+    }
+
+    @include mq_down('sm') {
+      padding: {
+        top: 30px;
+        right: 10px;
+        left: 10px;
+      }
+    }
+  }
+
+  &.xs {
+    width: 50vw;
+  }
+
+  &.sm {
+    width: 60vw;
+  }
+
+  &.md {
+    width: 70vw;
+  }
+
+  &.lg {
+    width: 85vw;
+  }
+
+  &.xl {
+    width: 95vw;
+  }
+
+  @include mq_down('sm') {
+    width: 90vw;
+    padding: {
+      top: 24px;
+      right: 5%;
+      bottom: 24px;
+      left: 5%;
+    }
+
+    &.xs {
+      width: 90vw;
+    }
+
+    &.sm {
+      width: 90vw;
+    }
+
+    &.md {
+      width: 90vw;
+    }
+
+    &.lg {
+      width: 90vw;
+    }
+
+    &.xl {
+      width: 95vw;
+    }
+  }
+
+  &.full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+  }
+}
+
+.w__close {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  cursor: pointer;
+  outline: none;
+
+  img {
+    width: 22px;
+  }
+}

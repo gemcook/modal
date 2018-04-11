@@ -1,0 +1,28 @@
+// レスポンシブ用のクラスを生成するmixin
+@mixin responsive($class, $bp: $bp_down) {
+  #{$class} {
+    @content;
+  }
+
+  @each $suffix, $value in $bp {
+    @media #{$value} {
+      #{$class}_#{$suffix} {
+        @content;
+      }
+    }
+  }
+}
+
+// メディアクエリ呼び出し用のmixin
+@mixin mq_down($breakpoint: md) {
+  @media #{map-get($bp_down, $breakpoint)} {
+    @content;
+  }
+}
+
+// メディアクエリ呼び出し用のmixin
+@mixin mq_up($breakpoint: md) {
+  @media #{map-get($bp_up, $breakpoint)} {
+    @content;
+  }
+}
