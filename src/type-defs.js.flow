@@ -1,0 +1,11 @@
+/* @flow */
+declare type ModalProps = {
+  isModal: boolean,
+  handleCloseModal: (isModal: boolean) => boolean,
+  size: string,
+  height: number,
+  closeButton: boolean,
+  ModalBody: React.Node,
+};
+
+declare function Modal<T>(): T;

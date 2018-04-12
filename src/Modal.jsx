@@ -8,16 +8,7 @@ import enhance from './enhance';
 
 ReactModal.setAppElement('body');
 
-type ModalProps = {
-  isModal: boolean,
-  handleCloseModal: (isModal: boolean) => boolean,
-  size?: string,
-  height?: number,
-  isCloseButton?: boolean,
-  ModalBody: any,
-};
-
-function Modal(props: ModalProps) {
+function Modal(props: ModalProps): React.Node {
   const {
     isModal,
     handleCloseModal,

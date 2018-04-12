@@ -4,6 +4,8 @@
 
 [libs]
 
+.*type-defs\.js.flow
+
 [lints]
 
 [options]
