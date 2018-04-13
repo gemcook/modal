@@ -15,36 +15,22 @@
   overflow: auto;
   background-color: #fff;
   outline: none;
-  padding: {
-    top: 24px;
-    right: 80px;
-    bottom: 24px;
-    left: 80px;
-  }
-  padding: {
-    top: 24px;
-    right: 5%;
-    bottom: 24px;
-    left: 5%;
+
+  .w__close {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+
+    img {
+      width: 18px;
+    }
   }
 
   .b__body {
     width: 100%;
-    padding: {
-      top: 22px;
-    }
 
     @include mq_down() {
       padding: {
-        top: 20px;
-        right: 10px;
-        left: 10px;
-      }
-    }
-
-    @include mq_down('md') {
-      padding: {
-        top: 30px;
         right: 10px;
         left: 10px;
       }
@@ -53,73 +39,96 @@
 
   &.xs {
     width: 40vw;
+    padding: {
+      right: 45px;
+      left: 45px;
+    }
+
+    .w__close {
+      top: 15px;
+      left: -30px;
+    }
   }
 
   &.sm {
     width: 50vw;
+    padding: {
+      right: 65px;
+      left: 65px;
+    }
+
+    .w__close {
+      top: 15px;
+      left: -50px;
+    }
   }
 
   &.md {
     width: 60vw;
+    padding: {
+      right: 70px;
+      left: 70px;
+    }
+
+    .w__close {
+      top: 17px;
+      left: -50px;
+    }
   }
 
   &.lg {
     width: 75vw;
+    padding: {
+      right: 70px;
+      left: 70px;
+    }
+
+    .w__close {
+      top: 18px;
+      left: -51px;
+    }
   }
 
   &.xl {
     width: 95vw;
+    padding: {
+      right: 80px;
+      left: 80px;
+    }
+
+    .w__close {
+      top: 20px;
+      left: -57px;
+    }
   }
 
-  @include mq_down('md') {
-    width: 90vw;
-    padding: {
-      top: 24px;
-      right: 5%;
-      bottom: 24px;
-      left: 5%;
-    }
-
-    &.xs {
-      width: 95vw;
-    }
-
-    &.sm {
-      width: 95vw;
-    }
-
-    &.md {
-      width: 95vw;
-    }
-
-    &.lg {
-      width: 95vw;
-    }
-
+  @include mq_down() {
+    &.xs,
+    &.sm,
+    &.md,
+    &.lg,
     &.xl {
       width: 95vw;
+      padding: {
+        top: 5px;
+        right: 24px;
+        left: 24px;
+      }
+
+      .w__close {
+        top: 10px;
+        left: -9px;
+      }
     }
-  }
 
-  &.full {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    background-color: white;
-  }
-}
-
-.w__close {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  cursor: pointer;
-  outline: none;
-
-  img {
-    width: 22px;
+    &.full {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      background-color: white;
+    }
   }
 }
