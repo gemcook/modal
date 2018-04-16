@@ -6,8 +6,6 @@ import {Image} from 'semantic-ui-react';
 import {assets} from './config';
 import enhance from './enhance';
 
-import '../src/styles/index.scss';
-
 ReactModal.setAppElement('body');
 
 function Modal(props: ModalProps): React.Node {
@@ -35,8 +33,8 @@ function Modal(props: ModalProps): React.Node {
       style={{
         content: {
           minHeight: height ? `${height}px` : '300px',
-          maxHeight: '80%',
-          borderRadius: '4px',
+          maxHeight: size === 'full' ? '100%' : '80%',
+          borderRadius: size === 'full' ? '0' : '4px',
         },
       }}>
       <div

@@ -8,7 +8,7 @@ import {Welcome} from '@storybook/react/demo';
 import {withState} from '@dump247/storybook-state';
 import {Modal} from '../src';
 import {ALotOfWelcome} from './ALotOfWelcome';
-import '../lib/base.css';
+import '../src/styles/index.scss';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -130,6 +130,37 @@ storiesOf('Modal', module)
             ModalBody={Welcome}
             handleCloseModal={() => store.set({isModal: !store.state.isModal})}
             size="xl"
+          />
+        </React.Fragment>
+      );
+    }),
+  )
+  .add(
+    'the size of full',
+    withState({isModal: false})(({store}) => {
+      return (
+        <React.Fragment>
+          <Button
+            color="pink"
+            onClick={() => store.set({isModal: !store.state.isModal})}>
+            Open Modal
+          </Button>
+          <Modal
+            isModal={store.state.isModal}
+            ModalBody={() => {
+              return (
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}>
+                  <Welcome />
+                </div>
+              );
+            }}
+            handleCloseModal={() => store.set({isModal: !store.state.isModal})}
+            size="full"
           />
         </React.Fragment>
       );
