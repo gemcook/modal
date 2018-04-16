@@ -9,7 +9,6 @@ import {withState} from '@dump247/storybook-state';
 import {Modal} from '../src';
 import {ALotOfWelcome} from './ALotOfWelcome';
 import '../lib/base.css';
-import '../src/styles/index.scss';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />

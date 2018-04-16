@@ -6,6 +6,8 @@ import {Image} from 'semantic-ui-react';
 import {assets} from './config';
 import enhance from './enhance';
 
+import '../src/styles/index.scss';
+
 ReactModal.setAppElement('body');
 
 function Modal(props: ModalProps): React.Node {
