@@ -1,36 +1,33 @@
-# @gemcook/modal
+# [@gemcook/modal](https://modal.storybook.gemcook.com)
 
 ## Demo
+
+* [Storybook](https://modal.storybook.gemcook.com)
 
 # Getting Started
 
 ## Installation
 
-```
+```shell
 $ npm install --save @gemcook/modal
 ```
 
 or
 
-```
-yarn add @gemcook/modal
+```shell
+$ yarn add @gemcook/modal
 ```
 
 ## Usage
 
-```
-<React.Fragment>
-  <Button
-    color="pink"
-    onClick={() => store.set({isModal: !store.state.isModal})}>
-    Open Modal
-  </Button>
-  <Modal
-    isModal={store.state.isModal}
-    ModalBody={Welcome}
-    handleCloseModal={() => store.set({isModal: !store.state.isModal})}
-  />
-</React.Fragment>
+```jsx
+<Modal
+  current={store.state.current}
+  total={100}
+  changePage={current => {
+    store.set({ current });
+  }}
+/>
 ```
 
 ## Documentaion
