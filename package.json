@@ -1,12 +1,22 @@
 {
   "name": "@gemcook/modal",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "main": "lib/index.umd.js",
   "repository": "https://github.com/gemcook/modal.git",
   "author": "Gemcook, Inc.",
   "license": "MIT",
-  "files": ["lib", "README.md", "LICENSE"],
-  "keywords": ["gemcook", "react", "react-component", "modal", "react-modal"],
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "gemcook",
+    "react",
+    "react-component",
+    "modal",
+    "react-modal"
+  ],
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.40",
     "@babel/core": "7.0.0-beta.40",
