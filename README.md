@@ -8,8 +8,6 @@ React Modal Component.
 
 * http://modal.storybook.gemcook.com
 
-# Getting Started
-
 ## Installation
 
 ```shell
