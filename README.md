@@ -1,16 +1,16 @@
-## [@gemcook/modal](http://modal.storybook.gemcook.com)
+# [@gemcook/modal](http://modal.storybook.gemcook.com)
 
 ---
 
 React Modal Component.
 
-### Online Demo
+## Online Demo
 
 * http://modal.storybook.gemcook.com
 
-## Getting Started
+# Getting Started
 
-### Installation
+## Installation
 
 ```shell
 npm install --save @gemcook/modal
@@ -22,7 +22,7 @@ or
 yarn add @gemcook/modal
 ```
 
-### Usage
+## Usage
 
 ```jsx
 <Modal
@@ -34,12 +34,12 @@ yarn add @gemcook/modal
 />
 ```
 
-### Documentaion
+## Documentaion
 
-#### Props
+### Props
 
-#### API
+### API
 
-### License
+## License
 
 @gemcook/modal is released under the MIT license.
