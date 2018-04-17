@@ -1,4 +1,4 @@
-# [@gemcook/modal](http://modal.storybook.gemcook.com)
+# [@gemcook/modal](https://modal.storybook.gemcook.com)
 
 ---
 
@@ -6,7 +6,7 @@ React Modal Component.
 
 ## Online Demo
 
-* http://modal.storybook.gemcook.com
+* https://modal.storybook.gemcook.com
 
 ## Installation
 

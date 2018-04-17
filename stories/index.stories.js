@@ -10,7 +10,7 @@ import {Modal} from '../src';
 import {ALotOfWelcome} from './ALotOfWelcome';
 import '../src/styles/index.scss';
 
-storiesOf('Welcome', module).add('to Storybook', () => (
+storiesOf('Welcome', module).add('to Gemcook Component', () => (
   <Welcome showApp={linkTo('Button')} />
 ));
 
