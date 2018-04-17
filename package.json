@@ -5,11 +5,8 @@
   "repository": "https://github.com/gemcook/modal.git",
   "author": "Gemcook, Inc.",
   "license": "MIT",
-  "files": [
-    "lib",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["lib", "README.md", "LICENSE"],
+  "keywords": ["gemcook", "react", "react-component", "modal", "react-modal"],
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.40",
     "@babel/core": "7.0.0-beta.40",

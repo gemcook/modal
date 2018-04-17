@@ -1,12 +1,16 @@
-# [@gemcook/modal](https://modal.storybook.gemcook.com)
+## [@gemcook/modal](http://modal.storybook.gemcook.com)
 
-## Demo
+---
 
-* [Storybook](https://modal.storybook.gemcook.com)
+React Modal Component.
 
-# Getting Started
+### Demo
 
-## Installation
+http://modal.storybook.gemcook.com
+
+## Getting Started
+
+### Installation
 
 ```shell
 $ npm install --save @gemcook/modal
@@ -18,7 +22,7 @@ or
 $ yarn add @gemcook/modal
 ```
 
-## Usage
+### Usage
 
 ```jsx
 <Modal
@@ -30,8 +34,8 @@ $ yarn add @gemcook/modal
 />
 ```
 
-## Documentaion
+### Documentaion
 
-### Props
+#### Props
 
-### API
+#### API
