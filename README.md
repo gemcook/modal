@@ -24,11 +24,9 @@ yarn add @gemcook/modal
 
 ```jsx
 <Modal
-  current={store.state.current}
-  total={100}
-  changePage={current => {
-    store.set({ current });
-  }}
+  isModal={store.state.isModal}
+  ModalBody={Welcome}
+  handleCloseModal={() => store.set({ isModal: !store.state.isModal })}
 />
 ```
 
