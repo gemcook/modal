@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/modal",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "main": "lib/index.umd.js",
   "repository": "https://github.com/gemcook/modal.git",
   "author": "Gemcook, Inc.",
@@ -98,7 +98,6 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@gemcook/modal": "^0.3.0",
     "classnames": "2.2.5",
     "prop-types": "15.6.1",
     "react": "16.3.1",
