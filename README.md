@@ -2,6 +2,8 @@
 
 ---
 
+[![npm version](https://badge.fury.io/js/%40gemcook%2Fmodal.svg)](https://badge.fury.io/js/%40gemcook%2Fmodal)
+
 React Modal Component.
 
 ## Online Demo
