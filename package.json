@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.umd.js",
   "repository": "https://github.com/gemcook/modal.git",
   "author": "Gemcook, Inc.",
