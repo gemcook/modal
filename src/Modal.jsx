@@ -32,7 +32,7 @@ function Modal(props: ModalProps): React.Node {
       })}
       style={{
         content: {
-          minHeight: height ? `${height}px` : '300px',
+          minHeight: height ? `${height}px` : '150px',
           maxHeight: size === 'full' ? '100%' : '80%',
           borderRadius: size === 'full' ? '0' : '4px',
         },
