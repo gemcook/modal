@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/modal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/cjs/index.cjs.js",
   "module": "lib/es/index.es.js",
   "sideEffects": false,
