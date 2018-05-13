@@ -1,0 +1,3 @@
+/* eslint-disable */
+/* @flow */
+declare export var Modal: any;

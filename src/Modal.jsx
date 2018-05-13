@@ -5,10 +5,11 @@ import ReactModal from 'react-modal';
 import {Image} from 'semantic-ui-react';
 import {assets} from './config';
 import enhance from './enhance';
+import type {Props} from './type';
 
 ReactModal.setAppElement('body');
 
-function Modal(props: ModalProps): React.Node {
+function Modal(props: Props) {
   const {
     isModal,
     handleCloseModal,
