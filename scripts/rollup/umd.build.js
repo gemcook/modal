@@ -45,7 +45,10 @@ async function build() {
       closure(getClosureOptions()),
       // TODO: COPYRIGHT
       // stripBanner(),
-      isProduction && prettier(),
+      isProduction &&
+        prettier({
+          parser: 'babylon',
+        }),
     ],
   });
 
@@ -53,6 +56,13 @@ async function build() {
     format: 'umd',
     file: resolvePath('lib/index.js'),
     name: '@gemcook/modal',
+    globals: {
+      recompose: 'recompose',
+      react: 'React',
+      classnames: 'classNames',
+      'react-modal': 'ReactModal',
+      'semantic-ui-react': 'semanticUiReact',
+    },
   });
 }
 
