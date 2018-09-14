@@ -78,12 +78,12 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "classnames": "2.2.5",
-    "prop-types": "15.6.1",
-    "react": "16.3.1",
-    "react-dom": "16.3.1",
-    "react-modal": "3.3.2",
-    "recompose": "0.26.0",
-    "semantic-ui-react": "0.79.1"
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-modal": "^3.5.1",
+    "recompose": "^0.30.0",
+    "semantic-ui-react": "^0.82.5"
   }
 }
