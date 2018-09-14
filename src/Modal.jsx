@@ -37,7 +37,8 @@ function Modal(props: Props) {
           maxHeight: size === 'full' ? '100%' : '80%',
           borderRadius: size === 'full' ? '0' : '4px',
         },
-      }}>
+      }}
+    >
       <div
         className={classNames({
           w__close: true,
@@ -45,7 +46,8 @@ function Modal(props: Props) {
         })}
         onClick={() => handleCloseModal(!isModal)}
         role="button"
-        tabIndex={0}>
+        tabIndex={0}
+      >
         <Image src={assets.icons.close} />
       </div>
       <div className="b__body">
