@@ -18,6 +18,8 @@
 
   .w__close {
     position: relative;
+    z-index: 9999;
+    width: 18px;
     cursor: pointer;
     outline: none;
 
