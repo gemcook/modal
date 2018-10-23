@@ -1,15 +1,17 @@
 /* @flow */
-import React from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
+import type {Element} from 'react';
 import ReactModal from 'react-modal';
-import {Image} from 'semantic-ui-react';
+import {Image, Button} from 'semantic-ui-react';
 import {assets} from './config';
 import enhance from './enhance';
-import type {Props} from './type';
+import * as R from 'ramda';
+import type {Props} from './type.flow';
 
 ReactModal.setAppElement('body');
 
-function Modal(props: Props) {
+function Modal(props: Props): Element<*> {
   const {
     isModal,
     handleCloseModal,
@@ -17,6 +19,13 @@ function Modal(props: Props) {
     height,
     isCloseButton,
     ModalBody,
+    isShowYesButton,
+    yesLabel = 'Yes',
+    yesHandler,
+    isShowCancelButton,
+    cancelLabel = 'No',
+    cancelHandler,
+    children,
   } = props;
 
   return (
@@ -51,7 +60,37 @@ function Modal(props: Props) {
         <Image src={assets.icons.close} />
       </div>
       <div className="b__body">
-        <ModalBody {...props} />
+        {R.cond([
+          [
+            ({children}) => R.type(children) === 'Function',
+            ({children, ...rest}) => children(rest),
+          ],
+          [
+            ({children}) => R.type(children) === 'Object',
+            ({children}) => React.Children.only(children),
+          ],
+          [
+            ({children}) => R.type(children) === 'String',
+            ({children}) => children,
+          ],
+          [R.T, () => ''],
+        ])(props)}
+        {R.isNil(children) &&
+          !R.isNil(ModalBody) && (
+            <>
+              <div className="w__modal-body">
+                <ModalBody {...props} />
+              </div>
+              <div className="w__button">
+                {isShowCancelButton && (
+                  <Button onClick={cancelLabel}>{cancelHandler}</Button>
+                )}
+                {isShowYesButton && (
+                  <Button onClick={yesHandler}>{yesLabel}</Button>
+                )}
+              </div>
+            </>
+          )}
       </div>
     </ReactModal>
   );
