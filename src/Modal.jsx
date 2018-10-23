@@ -1,12 +1,12 @@
 /* @flow */
 import * as React from 'react';
 import classNames from 'classnames';
-import type {Element} from 'react';
+import * as R from 'ramda';
 import ReactModal from 'react-modal';
-import {Image, Button} from 'semantic-ui-react';
+import {Button, Image} from 'semantic-ui-react';
 import {assets} from './config';
 import enhance from './enhance';
-import * as R from 'ramda';
+import type {Element} from 'react';
 import type {Props} from './type.flow';
 
 ReactModal.setAppElement('body');
@@ -83,10 +83,26 @@ function Modal(props: Props): Element<*> {
               </div>
               <div className="w__button">
                 {isShowCancelButton && (
-                  <Button onClick={cancelLabel}>{cancelHandler}</Button>
+                  <Button
+                    className={classNames({
+                      'two-buttons': isShowCancelButton && isShowYesButton,
+                      cancel: isShowCancelButton,
+                    })}
+                    onClick={cancelHandler}
+                  >
+                    {cancelLabel}
+                  </Button>
                 )}
                 {isShowYesButton && (
-                  <Button onClick={yesHandler}>{yesLabel}</Button>
+                  <Button
+                    className={classNames({
+                      'two-buttons': isShowCancelButton && isShowYesButton,
+                      yes: isShowYesButton,
+                    })}
+                    onClick={yesHandler}
+                  >
+                    {yesLabel}
+                  </Button>
                 )}
               </div>
             </>
