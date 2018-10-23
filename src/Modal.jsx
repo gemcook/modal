@@ -84,9 +84,9 @@ function Modal(props: Props): Element<*> {
               <div className="w__button">
                 {isShowCancelButton && (
                   <Button
-                    negative
                     className={classNames({
                       'two-buttons': isShowCancelButton && isShowYesButton,
+                      cancel: isShowCancelButton,
                     })}
                     onClick={cancelHandler}
                   >
@@ -95,9 +95,9 @@ function Modal(props: Props): Element<*> {
                 )}
                 {isShowYesButton && (
                   <Button
-                    positive
                     className={classNames({
                       'two-buttons': isShowCancelButton && isShowYesButton,
+                      yes: isShowYesButton,
                     })}
                     onClick={yesHandler}
                   >

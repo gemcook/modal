@@ -37,7 +37,8 @@
 
     .w__button {
       padding: {
-        top: 20px;
+        top: 24px;
+        bottom: 12px;
       }
       display: flex;
       justify-content: center;
@@ -46,15 +47,34 @@
         margin: {
           right: 0;
         }
+        width: 120px;
+        height: 40px;
+
+        &:hover {
+          opacity: 0.7;
+          transition-duration: 0.4s;
+        }
+
+        &.cancel {
+          color: #46c0c2;
+          background-color: #ffffff;
+          border: solid 1px #46c0c2;
+          border-radius: 3px;
+        }
+        &.yes {
+          color: #ffffff;
+          background-color: #46c0c2;
+          border-radius: 3px;
+        }
         &.two-buttons {
-          &.negative {
+          &.cancel {
             margin: {
-              right: 4px;
+              right: 12px;
             }
           }
-          &.positive {
+          &.yes {
             margin: {
-              left: 4px;
+              left: 12px;
             }
           }
         }
