@@ -1,13 +1,13 @@
 /* @flow */
-import React from 'react';
-import {Button} from 'semantic-ui-react';
-import {storiesOf} from '@storybook/react';
-import {linkTo} from '@storybook/addon-links';
-import {withInfo} from '@storybook/addon-info';
+import * as React from 'react';
 import {withState} from '@dump247/storybook-state';
+import {withInfo} from '@storybook/addon-info';
+import {storiesOf} from '@storybook/react';
+import {Button} from 'semantic-ui-react';
 import {Modal} from '../src';
 import {ALotOfModalBody} from './ALotOfModalBody';
 import {ModalBody} from './ModalBody';
+// $ImportStyle
 import '../src/styles/index.scss';
 
 storiesOf('Modal', module)
@@ -19,7 +19,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -42,7 +43,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -66,7 +68,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -90,7 +93,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -114,7 +118,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -138,7 +143,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -162,7 +168,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
@@ -174,7 +181,8 @@ storiesOf('Modal', module)
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                    }}>
+                    }}
+                  >
                     <ModalBody />
                   </div>
                 );
@@ -197,7 +205,8 @@ storiesOf('Modal', module)
           <div>
             <Button
               color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}>
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
               Open Modal
             </Button>
             <Modal
