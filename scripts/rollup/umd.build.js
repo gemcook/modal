@@ -47,6 +47,7 @@ rollup({
       globals: {
         recompose: 'recompose',
         react: 'React',
+        'react-dom': 'reactDom',
         classnames: 'classNames',
         'react-modal': 'ReactModal',
         'semantic-ui-react': 'semanticUiReact',
