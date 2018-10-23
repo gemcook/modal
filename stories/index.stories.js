@@ -26,9 +26,6 @@ storiesOf('Modal', module)
             <Modal
               isModal={store.state.isModal}
               ModalBody={ModalBody}
-              isShowYesButton
-              yesLabel="確認する"
-              isShowCancelButton
               handleCloseModal={() =>
                 store.set({isModal: !store.state.isModal})
               }
