@@ -11,11 +11,12 @@ import type {Props} from './type.flow';
 
 ReactModal.setAppElement('body');
 
-function Modal(props: Props): Element<*> {
+function Modal(props: Props): Element<'div'> {
   const {
     isModal,
     handleCloseModal,
     size,
+    className,
     height,
     isCloseButton,
     ModalBody,
@@ -25,7 +26,6 @@ function Modal(props: Props): Element<*> {
     isShowCancelButton,
     cancelLabel = 'No',
     cancelHandler,
-    children,
   } = props;
 
   return (
@@ -36,10 +36,13 @@ function Modal(props: Props): Element<*> {
         handleCloseModal(!isModal);
       }}
       overlayClassName="a__overlay"
-      className={classNames({
-        app__modal: true,
-        [size || 'sm']: true,
-      })}
+      className={[
+        classNames({
+          app__modal: true,
+          [size || 'sm']: true,
+        }),
+        className,
+      ].join(' ')}
       style={{
         content: {
           minHeight: height ? `${height}px` : '150px',
@@ -60,53 +63,51 @@ function Modal(props: Props): Element<*> {
         <Image src={assets.icons.close} />
       </div>
       <div className="b__body">
-        {R.cond([
-          [
-            ({children}) => R.type(children) === 'Function',
-            ({children, ...rest}) => children(rest),
-          ],
-          [
-            ({children}) => R.type(children) === 'Object',
-            ({children}) => React.Children.only(children),
-          ],
-          [
-            ({children}) => R.type(children) === 'String',
-            ({children}) => children,
-          ],
-          [R.T, () => ''],
-        ])(props)}
-        {R.isNil(children) &&
-          !R.isNil(ModalBody) && (
-            <>
-              <div className="w__modal-body">
-                <ModalBody {...props} />
-              </div>
-              <div className="w__button">
-                {isShowCancelButton && (
-                  <Button
-                    className={classNames({
-                      'two-buttons': isShowCancelButton && isShowYesButton,
-                      cancel: isShowCancelButton,
-                    })}
-                    onClick={cancelHandler}
-                  >
-                    {cancelLabel}
-                  </Button>
-                )}
-                {isShowYesButton && (
-                  <Button
-                    className={classNames({
-                      'two-buttons': isShowCancelButton && isShowYesButton,
-                      yes: isShowYesButton,
-                    })}
-                    onClick={yesHandler}
-                  >
-                    {yesLabel}
-                  </Button>
-                )}
-              </div>
-            </>
+        <div className="w__modal-body">
+          {R.isNil(ModalBody) ? (
+            R.cond([
+              [
+                ({children}) => R.type(children) === 'Function',
+                ({children, ...rest}) => children(rest),
+              ],
+              [
+                ({children}) => R.type(children) === 'Object',
+                ({children}) => React.Children.only(children),
+              ],
+              [
+                ({children}) => R.type(children) === 'String',
+                ({children}) => children,
+              ],
+              [R.T, () => ''],
+            ])(props)
+          ) : (
+            <ModalBody {...props} />
           )}
+        </div>
+        <div className="w__button">
+          {isShowCancelButton && (
+            <Button
+              className={classNames({
+                'two-buttons': isShowCancelButton && isShowYesButton,
+                cancel: isShowCancelButton,
+              })}
+              onClick={cancelHandler}
+            >
+              {cancelLabel}
+            </Button>
+          )}
+          {isShowYesButton && (
+            <Button
+              className={classNames({
+                'two-buttons': isShowCancelButton && isShowYesButton,
+                yes: isShowYesButton,
+              })}
+              onClick={yesHandler}
+            >
+              {yesLabel}
+            </Button>
+          )}
+        </div>
       </div>
     </ReactModal>
   );

@@ -17,6 +17,7 @@ type Props = {
   ModalBody: any,
   isCloseButton: boolean,
   children?: Function,
+  className: string,
 } & ButtonProps;
 
 export type {Props};
