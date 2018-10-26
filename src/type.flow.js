@@ -6,7 +6,7 @@ type ButtonProps = {
   isShowYesButton?: boolean,
   yesLabel?: string,
   yesHandler?: OnClick<OnClickEvent>,
-  isShowNolButton?: boolean,
+  isShowNoButton?: boolean,
   noLabel?: string,
   noHandler?: OnClick<OnClickEvent>,
 };

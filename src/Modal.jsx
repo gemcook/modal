@@ -23,7 +23,7 @@ function Modal(props: Props): Element<'div'> {
     isShowYesButton,
     yesLabel = 'Yes',
     yesHandler,
-    isShowNolButton,
+    isShowNoButton,
     noLabel = 'No',
     noHandler,
   } = props;
@@ -99,11 +99,11 @@ function Modal(props: Props): Element<'div'> {
             : ModalBody && <ModalBody {...props} />}
         </div>
         <div className="w__button">
-          {isShowNolButton && (
+          {isShowNoButton && (
             <Button
               className={classNames({
-                'two-buttons': isShowNolButton && isShowYesButton,
-                cancel: isShowNolButton,
+                'two-buttons': isShowNoButton && isShowYesButton,
+                cancel: isShowNoButton,
               })}
               onClick={noHandler}
             >
@@ -113,7 +113,7 @@ function Modal(props: Props): Element<'div'> {
           {isShowYesButton && (
             <Button
               className={classNames({
-                'two-buttons': isShowNolButton && isShowYesButton,
+                'two-buttons': isShowNoButton && isShowYesButton,
                 yes: isShowYesButton,
               })}
               onClick={yesHandler}
