@@ -23,6 +23,16 @@ rollup({
       include: 'node_modules/**',
       namedExports: {
         'node_modules/glamor/server.js': ['renderStatic'],
+        'node_modules/prop-types/index.js': [
+          'number',
+          'oneOfType',
+          'string',
+          'array',
+          'func',
+          'oneOf',
+          'arrayOf',
+          'object',
+        ],
       },
     }),
     replace({
