@@ -68,12 +68,12 @@
         &.two-buttons {
           &.cancel {
             margin: {
-              right: 12px;
+              right: 12px !important;
             }
           }
           &.yes {
             margin: {
-              left: 12px;
+              left: 12px !important;
             }
           }
         }
