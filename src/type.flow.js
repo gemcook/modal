@@ -9,6 +9,7 @@ type ButtonProps = {
   isShowNoButton?: boolean,
   noLabel?: string,
   noHandler?: OnClick<OnClickEvent>,
+  isLoading?: boolean,
 };
 
 type Props = {

@@ -26,6 +26,7 @@ function Modal(props: Props): Element<'div'> {
     isShowNoButton,
     noLabel = 'No',
     noHandler,
+    isLoading,
   } = props;
 
   return (
@@ -105,6 +106,7 @@ function Modal(props: Props): Element<'div'> {
                 'two-buttons': isShowNoButton && isShowYesButton,
                 cancel: isShowNoButton,
               })}
+              disabled={isLoading}
               onClick={noHandler}
             >
               {noLabel}
@@ -116,6 +118,7 @@ function Modal(props: Props): Element<'div'> {
                 'two-buttons': isShowNoButton && isShowYesButton,
                 yes: isShowYesButton,
               })}
+              loading={isLoading}
               onClick={yesHandler}
             >
               {yesLabel}
