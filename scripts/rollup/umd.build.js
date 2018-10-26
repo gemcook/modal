@@ -21,6 +21,9 @@ rollup({
     }),
     commonjs({
       include: 'node_modules/**',
+      namedExports: {
+        'node_modules/glamor/server.js': ['renderStatic'],
+      },
     }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
