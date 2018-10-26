@@ -119,6 +119,7 @@ function Modal(props: Props): Element<'div'> {
                 yes: isShowYesButton,
               })}
               loading={isLoading}
+              disabled={isLoading}
               onClick={yesHandler}
             >
               {yesLabel}
