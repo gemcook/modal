@@ -1,26 +1,3 @@
 // @flow
-type OnClickEvent = SyntheticEvent<HTMLButtonElement>;
-type OnClick<T> = (event: T) => void | any;
 
-type ButtonProps = {
-  isShowYesButton?: boolean,
-  yesLabel?: string,
-  yesHandler?: OnClick<OnClickEvent>,
-  isShowNolButton?: boolean,
-  noLabel?: string,
-  noHandler?: OnClick<OnClickEvent>,
-};
-
-type Props = {|
-  isModal: boolean,
-  handleCloseModal: (isModal: boolean) => boolean,
-  size?: string,
-  height?: number,
-  ModalBody?: any,
-  className?: string,
-  title?: string,
-  actionMessage?: string,
-  resource?: string,
-|} & ButtonProps;
-
-declare export var Modal: Class<React$Component<Props, any>>;
+declare export var Modal: Class<React$Component<any, any>>;
