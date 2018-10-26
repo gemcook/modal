@@ -1,23 +1,27 @@
 /* @flow */
+type OnClickEvent = SyntheticEvent<HTMLButtonElement>;
+type OnClick<T> = (event: T) => void;
+
 type ButtonProps = {
   isShowYesButton?: boolean,
   yesLabel?: string,
-  yesHandler?: Function,
-  isShowCancelButton?: boolean,
-  cancelLabel?: string,
-  cancelHandler?: Function,
+  yesHandler?: OnClick<OnClickEvent>,
+  isShowNolButton?: boolean,
+  noLabel?: string,
+  noHandler?: OnClick<OnClickEvent>,
 };
 
 type Props = {
   isModal: boolean,
   handleCloseModal: (isModal: boolean) => boolean,
-  size: string,
-  height: number,
-  closeButton: boolean,
-  ModalBody: any,
-  isCloseButton: boolean,
+  size?: string,
+  height?: number,
+  ModalBody?: any,
   children?: Function,
-  className: string,
+  className?: string,
+  title?: string,
+  actionMessage?: string,
+  resource?: string,
 } & ButtonProps;
 
-export type {Props};
+export type {Props, OnClickEvent};

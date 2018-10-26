@@ -1,6 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import classNames from 'classnames';
+import {Heading, Paragraph, Strong} from 'evergreen-ui';
 import * as R from 'ramda';
 import ReactModal from 'react-modal';
 import {Button, Image} from 'semantic-ui-react';
@@ -18,14 +19,13 @@ function Modal(props: Props): Element<'div'> {
     size,
     className,
     height,
-    isCloseButton,
     ModalBody,
     isShowYesButton,
     yesLabel = 'Yes',
     yesHandler,
-    isShowCancelButton,
-    cancelLabel = 'No',
-    cancelHandler,
+    isShowNolButton,
+    noLabel = 'No',
+    noHandler,
   } = props;
 
   return (
@@ -54,7 +54,6 @@ function Modal(props: Props): Element<'div'> {
       <div
         className={classNames({
           w__close: true,
-          hide: isCloseButton === false,
         })}
         onClick={() => handleCloseModal(!isModal)}
         role="button"
@@ -64,42 +63,57 @@ function Modal(props: Props): Element<'div'> {
       </div>
       <div className="b__body">
         <div className="w__modal-body">
-          {R.isNil(ModalBody) ? (
-            R.cond([
-              [
-                ({children}) => R.type(children) === 'Function',
-                ({children, ...rest}) => children(rest),
-              ],
-              [
-                ({children}) => R.type(children) === 'Object',
-                ({children}) => React.Children.only(children),
-              ],
-              [
-                ({children}) => R.type(children) === 'String',
-                ({children}) => children,
-              ],
-              [R.T, () => ''],
-            ])(props)
-          ) : (
-            <ModalBody {...props} />
-          )}
+          {R.isNil(ModalBody)
+            ? R.cond([
+                [
+                  ({title, actionMessage, resource}) =>
+                    R.type(title) === 'String' ||
+                    (R.type(actionMessage) === 'String' &&
+                      R.type(resource) === 'String'),
+                  ({title, actionMessage, resource, ...rest}) => (
+                    <>
+                      <Heading size={700} marginTop="default">
+                        {title}
+                      </Heading>
+                      <Paragraph marginTop="default">
+                        <Strong size={500}>{resource}</Strong>
+                        {actionMessage}
+                      </Paragraph>
+                    </>
+                  ),
+                ],
+                [
+                  ({children}) => R.type(children) === 'Function',
+                  ({children, ...rest}) => children(rest),
+                ],
+                [
+                  ({children}) => R.type(children) === 'Object',
+                  ({children}) => React.Children.only(children),
+                ],
+                [
+                  ({children}) => R.type(children) === 'String',
+                  ({children}) => children,
+                ],
+                [R.T, () => ''],
+              ])(props)
+            : ModalBody && <ModalBody {...props} />}
         </div>
         <div className="w__button">
-          {isShowCancelButton && (
+          {isShowNolButton && (
             <Button
               className={classNames({
-                'two-buttons': isShowCancelButton && isShowYesButton,
-                cancel: isShowCancelButton,
+                'two-buttons': isShowNolButton && isShowYesButton,
+                cancel: isShowNolButton,
               })}
-              onClick={cancelHandler}
+              onClick={noHandler}
             >
-              {cancelLabel}
+              {noLabel}
             </Button>
           )}
           {isShowYesButton && (
             <Button
               className={classNames({
-                'two-buttons': isShowCancelButton && isShowYesButton,
+                'two-buttons': isShowNolButton && isShowYesButton,
                 yes: isShowYesButton,
               })}
               onClick={yesHandler}
