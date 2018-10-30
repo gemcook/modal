@@ -1,5 +1,4 @@
 /* @flow */
-import * as R from 'ramda';
 import {compose, lifecycle, setDisplayName, type HOC} from 'recompose';
 import type {Props} from './type.flow';
 
@@ -13,13 +12,13 @@ const enhance: HOC<Props, *> = compose(
         isShowCancelButton,
         cancelHandler,
       } = this.props;
-      if (isShowYesButton && R.isNil(yesHandler)) {
+      if (isShowYesButton && !yesHandler) {
         console.error(
           'if you wish yes button, must be having "isShowYesButton" "yesHandler".',
         );
       }
 
-      if (isShowCancelButton && R.isNil(cancelHandler)) {
+      if (isShowCancelButton && !cancelHandler) {
         console.error(
           'if you wish cancel button, must be having "isShowCancelButton" "cancelHandler".',
         );

@@ -25,4 +25,4 @@ type Props = {
   resource?: string,
 } & ButtonProps;
 
-export type {Props, OnClickEvent};
+export type {Props, OnClickEvent, ButtonProps};

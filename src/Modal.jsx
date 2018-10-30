@@ -4,7 +4,8 @@ import classNames from 'classnames';
 import {Heading, Paragraph, Strong} from 'evergreen-ui';
 import * as R from 'ramda';
 import ReactModal from 'react-modal';
-import {Button, Image} from 'semantic-ui-react';
+import {Image} from 'semantic-ui-react';
+import Buttons from './Buttons';
 import {assets} from './config';
 import enhance from './enhance';
 import type {Element} from 'react';
@@ -99,33 +100,15 @@ function Modal(props: Props): Element<'div'> {
               ])(props)
             : ModalBody && <ModalBody {...props} />}
         </div>
-        <div className="w__button">
-          {isShowNoButton && (
-            <Button
-              className={classNames({
-                'two-buttons': isShowNoButton && isShowYesButton,
-                cancel: isShowNoButton,
-              })}
-              disabled={isLoading}
-              onClick={noHandler}
-            >
-              {noLabel}
-            </Button>
-          )}
-          {isShowYesButton && (
-            <Button
-              className={classNames({
-                'two-buttons': isShowNoButton && isShowYesButton,
-                yes: isShowYesButton,
-              })}
-              loading={isLoading}
-              disabled={isLoading}
-              onClick={yesHandler}
-            >
-              {yesLabel}
-            </Button>
-          )}
-        </div>
+        <Buttons
+          isShowNoButton={isShowNoButton}
+          isShowYesButton={isShowYesButton}
+          isLoading={isLoading}
+          noHandler={noHandler}
+          noLabel={noLabel}
+          yesHandler={yesHandler}
+          yesLabel={yesLabel}
+        />
       </div>
     </ReactModal>
   );
