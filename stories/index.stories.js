@@ -222,7 +222,7 @@ storiesOf('Modal', module)
     ),
   )
   .add(
-    'easy props',
+    'easy props(non styling)',
     withState({isModal: false})(
       withInfo('easy props')(({store}) => {
         return (
@@ -247,6 +247,39 @@ storiesOf('Modal', module)
               isShowNoButton
               noLabel="キャンセル"
               noHandler={() => {}}
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'easy props(with styling)',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+              btnStyling
             />
           </div>
         );

@@ -17,7 +17,7 @@ function Modal(props: Props): Element<'div'> {
     isModal,
     handleCloseModal,
     size,
-    btnStyleing,
+    btnStyling,
     className,
     height,
     ModalBody,
@@ -106,7 +106,7 @@ function Modal(props: Props): Element<'div'> {
           noLabel={noLabel}
           yesHandler={yesHandler}
           yesLabel={yesLabel}
-          btnStyleing={btnStyleing}
+          btnStyling={btnStyling}
         />
       </div>
     </ReactModal>

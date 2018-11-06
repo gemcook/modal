@@ -15,7 +15,7 @@ export default function Buttons(props: Props) {
     noLabel,
     yesHandler,
     yesLabel,
-    btnStyleing,
+    btnStyling,
   } = props;
   return (
     <div className="w__button">
@@ -24,7 +24,7 @@ export default function Buttons(props: Props) {
           className={classNames({
             'two-buttons': isShowNoButton && isShowYesButton,
             no: isShowNoButton,
-            btnStyleing,
+            btnStyling,
           })}
           disabled={isLoading}
           onClick={noHandler}
@@ -37,7 +37,7 @@ export default function Buttons(props: Props) {
           className={classNames({
             'two-buttons': isShowNoButton && isShowYesButton,
             yes: isShowYesButton,
-            btnStyleing,
+            btnStyling,
           })}
           loading={isLoading}
           disabled={isLoading}
