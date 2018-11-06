@@ -10,6 +10,7 @@ type ButtonProps = {
   noLabel?: string,
   noHandler?: OnClick<OnClickEvent>,
   isLoading?: boolean,
+  btnStyleing: boolean,
 };
 
 type Props = {

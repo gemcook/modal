@@ -3,7 +3,6 @@ const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
 const prettier = require('rollup-plugin-prettier');
 const compiler = require('@ampproject/rollup-plugin-closure-compiler');
-const replace = require('rollup-plugin-replace');
 const resolve = require('rollup-plugin-node-resolve');
 const postcss = require('rollup-plugin-postcss');
 const {getBabelOptions, resolvePath, getClosureOptions} = require('./utils');
@@ -34,9 +33,6 @@ rollup({
           'object',
         ],
       },
-    }),
-    replace({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
     compiler(getClosureOptions()),
     postcss({

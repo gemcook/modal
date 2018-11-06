@@ -1,0 +1,44 @@
+.w__button {
+  padding: {
+    top: 24px;
+  }
+  display: flex;
+  justify-content: center;
+
+  .ui.button {
+    margin: {
+      right: 0;
+    }
+    width: 120px;
+    height: 40px;
+
+    &:hover {
+      opacity: 0.7;
+      transition-duration: 0.2s;
+    }
+
+    &.btnStyleing.no {
+      color: #fa6681;
+      background-color: #ffffff;
+      border: solid 1px #fa6681;
+      border-radius: 3px;
+    }
+    &.btnStyleing.yes {
+      color: #ffffff;
+      background-color: #fa6681;
+      border-radius: 3px;
+    }
+    &.two-buttons {
+      &.no {
+        margin: {
+          right: 12px !important;
+        }
+      }
+      &.yes {
+        margin: {
+          left: 12px !important;
+        }
+      }
+    }
+  }
+}

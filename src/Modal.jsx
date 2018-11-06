@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import classNames from 'classnames';
-import {Heading, Paragraph, Strong} from 'evergreen-ui';
 import * as R from 'ramda';
 import ReactModal from 'react-modal';
 import {Image} from 'semantic-ui-react';
@@ -18,6 +17,7 @@ function Modal(props: Props): Element<'div'> {
     isModal,
     handleCloseModal,
     size,
+    btnStyleing,
     className,
     height,
     ModalBody,
@@ -73,15 +73,13 @@ function Modal(props: Props): Element<'div'> {
                     (R.type(actionMessage) === 'String' &&
                       R.type(resource) === 'String'),
                   ({title, actionMessage, resource, ...rest}) => (
-                    <>
-                      <Heading size={700} marginTop="default">
-                        {title}
-                      </Heading>
-                      <Paragraph marginTop="default">
-                        <Strong size={500}>{resource}</Strong>
+                    <div>
+                      <h1>{title}</h1>
+                      <p>
+                        <b>{resource}</b>
                         {actionMessage}
-                      </Paragraph>
-                    </>
+                      </p>
+                    </div>
                   ),
                 ],
                 [
@@ -108,6 +106,7 @@ function Modal(props: Props): Element<'div'> {
           noLabel={noLabel}
           yesHandler={yesHandler}
           yesLabel={yesLabel}
+          btnStyleing={btnStyleing}
         />
       </div>
     </ReactModal>

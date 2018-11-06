@@ -211,10 +211,18 @@ storiesOf('Modal', module)
             </Button>
             <Modal
               isModal={store.state.isModal}
-              ModalBody={ALotOfModalBody}
               handleCloseModal={() =>
                 store.set({isModal: !store.state.isModal})
               }
+              title="カテゴリを削除"
+              resource={'aaaaaaaaaaaaaa'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
             />
           </div>
         );
