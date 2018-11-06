@@ -211,11 +211,35 @@ storiesOf('Modal', module)
             </Button>
             <Modal
               isModal={store.state.isModal}
+              ModalBody={ALotOfModalBody}
               handleCloseModal={() =>
                 store.set({isModal: !store.state.isModal})
               }
-              title="カテゴリを削除"
-              resource={'aaaaaaaaaaaaaa'}
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'easy props',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
               actionMessage="を削除しますか？"
               isShowYesButton
               yesLabel="削除する"
