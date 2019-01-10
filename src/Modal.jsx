@@ -53,7 +53,7 @@ function Modal(props: Props): Element<'div'> {
           borderRadius: size === 'full' ? '0' : '4px',
         },
         overlay: {
-          'background-color': `${overlayColor}`,
+          'backgroundColor': `${overlayColor}`,
         }
       }}
     >
