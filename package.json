@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/modal",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "main": "lib/index.js",
   "sideEffects": false,
   "repository": "https://github.com/gemcook/modal.git",
