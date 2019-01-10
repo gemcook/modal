@@ -517,4 +517,29 @@ storiesOf('with actions', module)
         );
       }),
     ),
+  )
+  .add(
+    'props(colored overlay)',
+    withState({isModal: false})(
+      withInfo('default')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              ModalBody={ModalBody}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              overlayColor="rgba(102, 255, 204, 0.45)"
+            />
+          </div>
+        );
+      }),
+    ),
   );

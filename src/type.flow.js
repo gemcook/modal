@@ -24,6 +24,7 @@ type Props = {
   title?: string,
   actionMessage?: string,
   resource?: string,
+  overlayColor?: string,
 } & ButtonProps;
 
 export type {Props, OnClickEvent, ButtonProps};

@@ -28,6 +28,7 @@ function Modal(props: Props): Element<'div'> {
     noLabel = 'No',
     noHandler,
     isLoading,
+    overlayColor,
   } = props;
 
   return (
@@ -51,6 +52,9 @@ function Modal(props: Props): Element<'div'> {
           maxHeight: size === 'full' ? '100%' : '80%',
           borderRadius: size === 'full' ? '0' : '4px',
         },
+        overlay: {
+          'background-color': `${overlayColor}`,
+        }
       }}
     >
       <div
