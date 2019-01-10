@@ -10,31 +10,7 @@ import {ModalBody} from './ModalBody';
 // $ImportStyle
 import '../src/styles/index.scss';
 
-storiesOf('Modal', module)
-  .add(
-    'default',
-    withState({isModal: false})(
-      withInfo('default')(({store}) => {
-        return (
-          <div>
-            <Button
-              color="pink"
-              onClick={() => store.set({isModal: !store.state.isModal})}
-            >
-              Open Modal
-            </Button>
-            <Modal
-              isModal={store.state.isModal}
-              ModalBody={ModalBody}
-              handleCloseModal={() =>
-                store.set({isModal: !store.state.isModal})
-              }
-            />
-          </div>
-        );
-      }),
-    ),
-  )
+storiesOf('default', module)
   .add(
     'the size of xs',
     withState({isModal: false})(
@@ -220,9 +196,11 @@ storiesOf('Modal', module)
         );
       }),
     ),
-  )
+  );
+
+storiesOf('with actions', module)
   .add(
-    'easy props(non styling)',
+    'this size of xs',
     withState({isModal: false})(
       withInfo('easy props')(({store}) => {
         return (
@@ -247,6 +225,7 @@ storiesOf('Modal', module)
               isShowNoButton
               noLabel="キャンセル"
               noHandler={() => {}}
+              size="xs"
             />
           </div>
         );
@@ -254,7 +233,260 @@ storiesOf('Modal', module)
     ),
   )
   .add(
-    'easy props(with styling)',
+    'this size of sm',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+              size="sm"
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'this size of md',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+              size="md"
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'this size of lg',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+              size="lg"
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'this size of xl',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+              size="xl"
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'this size of full',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+              size="full"
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'lots of characters',
+    withState({isModal: false})(
+      withInfo('lots of characters')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              ModalBody={ALotOfModalBody}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'hide yes button',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowNoButton
+              noLabel="キャンセル"
+              noHandler={() => {}}
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'hide cancel button',
+    withState({isModal: false})(
+      withInfo('easy props')(({store}) => {
+        return (
+          <div>
+            <Button
+              color="pink"
+              onClick={() => store.set({isModal: !store.state.isModal})}
+            >
+              Open Modal
+            </Button>
+            <Modal
+              isModal={store.state.isModal}
+              handleCloseModal={() =>
+                store.set({isModal: !store.state.isModal})
+              }
+              title="アイテムを削除"
+              resource={'アイテム'}
+              actionMessage="を削除しますか？"
+              isShowYesButton
+              yesLabel="削除する"
+              yesHandler={() => null}
+            />
+          </div>
+        );
+      }),
+    ),
+  )
+  .add(
+    'actions styles',
     withState({isModal: false})(
       withInfo('easy props')(({store}) => {
         return (
