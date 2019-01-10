@@ -1,4 +1,3 @@
-/* @flow */
 import * as React from 'react';
 import {withState} from '@dump247/storybook-state';
 import {withInfo} from '@storybook/addon-info';
@@ -7,7 +6,7 @@ import {Button} from 'semantic-ui-react';
 import {Modal} from '../src';
 import {ALotOfModalBody} from './ALotOfModalBody';
 import {ModalBody} from './ModalBody';
-// $ImportStyle
+
 import '../src/styles/index.scss';
 
 storiesOf('default', module)

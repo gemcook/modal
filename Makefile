@@ -15,15 +15,10 @@ prepublish:
 
 	$(MAKE) build-umd
 
-	cp ./flow-typed/index.js.flow ./lib/index.js.flow
-
 	cp -r ./src/styles/ ./lib/styles/
 
 build:
 	yarn run build-storybook
-
-gen-flow:
-	flow gen-flow-files src/index.js --out-dir flow-typed
 
 publish:
 	yarn publish --access public

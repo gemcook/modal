@@ -1,12 +1,8 @@
-/* @flow */
 import * as React from 'react';
 import classNames from 'classnames';
 import {Button} from 'semantic-ui-react';
-import type {ButtonProps} from './type.flow';
 
-type Props = {} & ButtonProps;
-
-export default function Buttons(props: Props) {
+export default function Buttons(props) {
   const {
     isShowNoButton,
     isShowYesButton,

@@ -1,4 +1,3 @@
-/* @flow */
 import * as React from 'react';
 import classNames from 'classnames';
 import * as R from 'ramda';
@@ -7,12 +6,10 @@ import {Image} from 'semantic-ui-react';
 import Buttons from './Buttons';
 import {assets} from './config';
 import enhance from './enhance';
-import type {Element} from 'react';
-import type {Props} from './type.flow';
 
 ReactModal.setAppElement('body');
 
-function Modal(props: Props): Element<'div'> {
+function Modal(props) {
   const {
     isModal,
     handleCloseModal,

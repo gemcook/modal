@@ -1,8 +1,6 @@
-/* @flow */
-import {compose, lifecycle, setDisplayName, type HOC} from 'recompose';
-import type {Props} from './type.flow';
+import {compose, lifecycle, setDisplayName} from 'recompose';
 
-const enhance: HOC<Props, *> = compose(
+const enhance = compose(
   setDisplayName('GcModal'),
   lifecycle({
     componentDidMount() {
