@@ -12,17 +12,17 @@ const enhance = compose(
       } = this.props;
       if (isShowYesButton && !yesHandler) {
         console.error(
-          'if you wish yes button, must be having "isShowYesButton" "yesHandler".',
+          'if you wish yes button, must be having "isShowYesButton" "yesHandler".'
         );
       }
 
       if (isShowCancelButton && !cancelHandler) {
         console.error(
-          'if you wish cancel button, must be having "isShowCancelButton" "cancelHandler".',
+          'if you wish cancel button, must be having "isShowCancelButton" "cancelHandler".'
         );
       }
     },
-  }),
+  })
 );
 
 export default enhance;

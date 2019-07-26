@@ -28,6 +28,18 @@ function Modal(props) {
     overlayColor,
   } = props;
 
+  const modalStyle = {
+    content: {
+      minHeight: height ? `${height}px` : '150px',
+      maxHeight: size === 'full' ? '100%' : '80%',
+      borderRadius: size === 'full' ? '0' : '4px',
+    },
+    // stylelint-disable selector-type-no-unknown
+    overlay: {
+      backgroundColor: overlayColor,
+    },
+  };
+
   return (
     <ReactModal
       isOpen={isModal}
@@ -43,16 +55,7 @@ function Modal(props) {
         }),
         className,
       ].join(' ')}
-      style={{
-        content: {
-          minHeight: height ? `${height}px` : '150px',
-          maxHeight: size === 'full' ? '100%' : '80%',
-          borderRadius: size === 'full' ? '0' : '4px',
-        },
-        overlay: {
-          backgroundColor: overlayColor,
-        },
-      }}
+      style={modalStyle}
     >
       <div
         className={classNames({

@@ -2,6 +2,7 @@
   padding: {
     top: 24px;
   }
+
   display: flex;
   justify-content: center;
 
@@ -9,6 +10,7 @@
     margin: {
       right: 0;
     }
+
     width: 120px;
     height: 40px;
 
@@ -19,12 +21,12 @@
 
     &.btnStyling.no {
       color: #fa6681;
-      background-color: #ffffff;
+      background-color: #fff;
       border: solid 1px #fa6681;
       border-radius: 3px;
     }
     &.btnStyling.yes {
-      color: #ffffff;
+      color: #fff;
       background-color: #fa6681;
       border-radius: 3px;
     }

@@ -32,8 +32,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'the size of sm',
@@ -57,8 +57,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'the size of md',
@@ -82,8 +82,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'the size of lg',
@@ -107,8 +107,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'the size of xl',
@@ -132,8 +132,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'the size of full',
@@ -169,8 +169,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'lots of characters',
@@ -193,8 +193,8 @@ storiesOf('default', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   );
 
 storiesOf('with actions', module)
@@ -228,8 +228,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'this size of sm',
@@ -261,8 +261,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'this size of md',
@@ -294,8 +294,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'this size of lg',
@@ -327,8 +327,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'this size of xl',
@@ -360,8 +360,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'this size of full',
@@ -393,8 +393,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'lots of characters',
@@ -423,8 +423,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'hide yes button',
@@ -452,8 +452,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'hide cancel button',
@@ -481,8 +481,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'actions styles',
@@ -514,8 +514,8 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   )
   .add(
     'props(colored overlay)',
@@ -539,6 +539,6 @@ storiesOf('with actions', module)
             />
           </div>
         );
-      }),
-    ),
+      })
+    )
   );
