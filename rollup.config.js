@@ -8,7 +8,7 @@ const postcss = require('rollup-plugin-postcss');
 export default [
   {
     input: 'src/index.js',
-    external: ['react', 'react-dom', 'semantic-ui-react'],
+    external: ['react', 'react-dom', 'semantic-ui-react', 'semantic-ui-css'],
     plugins: [
       json({
         include: 'node_modules/**',
