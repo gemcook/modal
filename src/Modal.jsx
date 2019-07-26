@@ -3,9 +3,12 @@ import classNames from 'classnames';
 import * as R from 'ramda';
 import ReactModal from 'react-modal';
 import {Image} from 'semantic-ui-react';
+
 import Buttons from './Buttons';
 import {assets} from './config';
 import enhance from './enhance';
+
+import './styles/index.scss';
 
 ReactModal.setAppElement('body');
 

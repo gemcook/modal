@@ -10,6 +10,21 @@ export default [
     input: 'src/index.js',
     external: ['react', 'react-dom', 'semantic-ui-react', 'semantic-ui-css'],
     plugins: [
+      {
+        name: 'clean lib dir',
+        buildStart: async () => {
+          const libPath = './lib';
+          const exists = await fs.pathExists(libPath);
+          if (exists) {
+            fs.emptyDirSync(libPath);
+          }
+        },
+        buildEnd: err => {
+          if (err) {
+            throw err;
+          }
+        },
+      },
       json({
         include: 'node_modules/**',
       }),
@@ -55,21 +70,6 @@ export default [
         extensions: ['.css', '.scss'],
         extract: 'lib/styles/index.css',
       }),
-      {
-        name: 'clean lib dir',
-        buildStart: async () => {
-          const libPath = './lib';
-          const exists = await fs.pathExists(libPath);
-          if (exists) {
-            fs.emptyDirSync(libPath);
-          }
-        },
-        buildEnd: err => {
-          if (err) {
-            throw err;
-          }
-        },
-      },
     ],
     output: {
       file: 'lib/index.js',
