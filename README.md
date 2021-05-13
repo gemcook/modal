@@ -6,10 +6,6 @@
 
 React Modal Component.
 
-## Online Demo
-
-* https://modal.storybook.gemcook.com
-
 ## Installation
 
 ```shell
